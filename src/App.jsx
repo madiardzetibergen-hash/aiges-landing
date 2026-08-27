@@ -62,7 +62,7 @@ function Reveal({ children, className = '', delay = 0, y = 34 }) {
 const heroTiles = [
   ['visual-a', '01'],
   ['visual-b', '02'],
-  ['visual-mark', '✦'],
+  ['visual-mark', ''],
   ['visual-c', '03'],
   ['visual-d', '04'],
 ];
@@ -137,10 +137,16 @@ function Home() {
           hidden: {},
           show: { transition: { staggerChildren: 0.08, delayChildren: 0.25 } },
         }}>
-          {heroTiles.map(([type, indexText], i) => (
-            <motion.div key={i} className="hero-tile-wrap" variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 1.1, ease } } }}>
+          {heroTiles.map(([type, label], i) => (
+            <motion.div
+              className={`hero-tile hero-tile--${i + 1}`}
+              key={type}
+              variants={{ hidden: { opacity: 0, y: 50, scale: 0.96 }, show: { opacity: 1, y: 0, scale: 1 } }}
+              transition={{ duration: 0.8, ease }}
+              whileHover={{ y: -8, rotate: i % 2 ? 1.5 : -1.5 }}
+            >
               <Visual type={type} original={true} />
-              <span className="hero-tile-idx">{indexText}</span>
+              <span className="tile-label">{label}</span>
             </motion.div>
           ))}
         </motion.div>
