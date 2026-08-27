@@ -1,7 +1,7 @@
 ﻿import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Instagram, Linkedin, X, ArrowUpRight } from "lucide-react";
-import { FaTelegramPlane } from "react-icons/fa";
+import { Phone, X, ArrowUpRight } from "lucide-react";
+import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export function ContactModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -83,7 +83,7 @@ export function ContactModal({ isOpen, onClose }) {
               </a>
 
               <a href="https://www.instagram.com/aiges.studio" target="_blank" rel="noopener noreferrer" className="contact-modal__row">
-                <div className="contact-modal__icon"><Instagram size={20} strokeWidth={1.5} /></div>
+                <div className="contact-modal__icon"><FaInstagram size={20} /></div>
                 <div className="contact-modal__content">
                   <span className="contact-modal__label">INSTAGRAM</span>
                   <span className="contact-modal__value">@aiges.studio</span>
@@ -92,7 +92,7 @@ export function ContactModal({ isOpen, onClose }) {
               </a>
 
               <a href="https://www.linkedin.com/in/%D0%B7%D0%B0%D1%80%D0%B8%D0%BD%D0%B0-%D1%81%D0%B5%D1%80%D0%B8%D0%BC%D0%B1%D0%B5%D1%82%D0%BE%D0%B2%D0%B0-2507b142a/" target="_blank" rel="noopener noreferrer" className="contact-modal__row">
-                <div className="contact-modal__icon"><Linkedin size={20} strokeWidth={1.5} /></div>
+                <div className="contact-modal__icon"><FaLinkedinIn size={20} /></div>
                 <div className="contact-modal__content">
                   <span className="contact-modal__label">LINKEDIN</span>
                   <span className="contact-modal__value">Zarina Serimbetova</span>
@@ -106,3 +106,4 @@ export function ContactModal({ isOpen, onClose }) {
     </AnimatePresence>
   );
 }
+

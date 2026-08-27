@@ -1,4 +1,5 @@
-import { ArrowUpRight, ArrowDown, ArrowLeft, ArrowRight, Instagram, Linkedin, Mail } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, ArrowLeft, ArrowRight, Mail } from 'lucide-react';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import React, { useEffect, useMemo, useState, createContext, useContext } from 'react';
 import { ContactModal } from './components/ContactModal';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -36,8 +37,8 @@ function Header({ compact = false }) {
         <img src="/logo.png" alt="AIGES" style={{ height: '14px' }} />
       </button>
       <div className="header-actions">
-        <a className="circle-link" href="https://www.instagram.com/aiges.studio" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={14} strokeWidth={1.5} /></a>
-        <a className="circle-link" href="https://www.linkedin.com/in/%D0%B7%D0%B0%D1%80%D0%B8%D0%BD%D0%B0-%D1%81%D0%B5%D1%80%D0%B8%D0%BC%D0%B1%D0%B5%D1%82%D0%BE%D0%B2%D0%B0-2507b142a/?skipRedirect=true" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={14} strokeWidth={1.5} /></a>
+        <a className="circle-link" href="https://www.instagram.com/aiges.studio" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram size={14} /></a>
+        <a className="circle-link" href="https://www.linkedin.com/in/%D0%B7%D0%B0%D1%80%D0%B8%D0%BD%D0%B0-%D1%81%D0%B5%D1%80%D0%B8%D0%BC%D0%B1%D0%B5%D1%82%D0%BE%D0%B2%D0%B0-2507b142a/?skipRedirect=true" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn size={14} /></a>
         <a className="circle-link" href="#" onClick={(e) => { e.preventDefault(); openContact(); }} aria-label="Email"><Mail size={14} strokeWidth={1.5} /></a>
         <a className="pill pill--light" href="#" onClick={(e) => { e.preventDefault(); openContact(); }}>GET IN TOUCH</a>
       </div>
@@ -241,7 +242,7 @@ function Footer() {
           <div className="brand-mini"><img src="/logo.png" alt="AIGES" style={{ height: '14px', filter: 'brightness(10)' }} /></div>
           <p>Digital products through strategy,<br />design and technology.</p>
           <a href="#" onClick={(e) => { e.preventDefault(); openContact(); }}>hello@aiges.kz</a>
-          <div className="footer-socials"><span aria-label="Instagram"><Instagram size={14} strokeWidth={1.5} /></span><span aria-label="LinkedIn"><Linkedin size={14} strokeWidth={1.5} /></span></div>
+          <div className="footer-socials"><span aria-label="Instagram"><FaInstagram size={14} /></span><span aria-label="LinkedIn"><FaLinkedinIn size={14} /></span></div>
         </div>
         <a className="pill pill--light" href="#" onClick={(e) => { e.preventDefault(); openContact(); }}><span>START PROJECT</span> <ArrowRight size={16} strokeWidth={1.5} /></a>
         <div className="footer-bottom"><span>AIGES / DIGITAL STUDIO / ALMATY</span><span>Built with React</span></div>
