@@ -1,5 +1,5 @@
 import { ArrowUpRight, ArrowDown, ArrowLeft, ArrowRight, Mail } from 'lucide-react';
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
 import React, { useEffect, useState, createContext, useContext } from 'react';
 import { ContactModal } from './components/ContactModal';
 import { AnimatePresence, motion, useScroll, useTransform, useSpring } from 'framer-motion';
@@ -360,8 +360,18 @@ function Footer() {
         <div>
           <div className="brand-mini"><img src="/logo.png" alt="AIGES" style={{ height: '14px', filter: 'brightness(10)' }} /></div>
           <p>{taglines[0]}<br />{taglines[1]}</p>
-          <a href="#" onClick={(e) => { e.preventDefault(); openContact(); }}>hello@aiges.kz</a>
-          <div className="footer-socials"><span aria-label="Instagram"><FaInstagram size={14} /></span><span aria-label="LinkedIn"><FaLinkedinIn size={14} /></span></div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', margin: '24px 0 16px' }}>
+            <a href="mailto:info@aiges.kz">info@aiges.kz</a>
+            <a href="tel:+77023734299">+7 702 373 42 99</a>
+            <a href="tel:+77018488086">+7 701 848 80 86</a>
+          </div>
+
+          <div className="footer-socials">
+            <a href="https://t.me/aigeskz" target="_blank" rel="noreferrer" aria-label="Telegram"><FaTelegramPlane size={14} /></a>
+            <a href="https://www.instagram.com/aiges.studio" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram size={14} /></a>
+            <a href="https://www.linkedin.com/in/%D0%B7%D0%B0%D1%80%D0%B8%D0%BD%D0%B0-%D1%81%D0%B5%D1%80%D0%B8%D0%BC%D0%B1%D0%B5%D1%82%D0%BE%D0%B2%D0%B0-2507b142a/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedinIn size={14} /></a>
+          </div>
         </div>
         <a className="pill pill--light" href="#" onClick={(e) => { e.preventDefault(); openContact(); }}>
           <span>{t(lang, 'ctaBtn')}</span> <ArrowRight size={16} strokeWidth={1.5} />

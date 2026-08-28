@@ -177,7 +177,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer-card p { color:#737373; font-size:12px; line-height:1.5; }
 .footer-card a { font-size:11px; }
 .footer-socials { display:flex; gap:7px; margin-top:24px; }
-.footer-socials span { width:30px; height:30px; border-radius:50%; border:1px solid #222; display:grid; place-items:center; font-size:9px; color:#8a8a8a; }
+.footer-socials a { width:30px; height:30px; border-radius:50%; border:1px solid #222; display:grid; place-items:center; color:#8a8a8a; transition: background 0.2s, color 0.2s; }
+.footer-socials a:hover { background: #fff; color: #000; }
 .footer-bottom { position:absolute; left:42px; right:42px; bottom:24px; border-top:1px solid #171717; padding-top:18px; display:flex; justify-content:space-between; color:#595959; font:500 8px ui-monospace, monospace; }
 
 /* Case page */
